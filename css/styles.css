@@ -222,6 +222,18 @@ a:hover {
   text-decoration: none;
 }
 
+/* ---------------------------------------------------------------
+   Main content
+   --------------------------------------------------------------- */
+.ms-page-content {
+  min-height: 60vh;
+  padding: 60px 24px;
+  flex: 1 0 auto;
+}
+
+/* ---------------------------------------------------------------
+   Footer
+   --------------------------------------------------------------- */
 .ms-footer {
   background-color: var(--ms-green);
   color: #EAF3EA;
@@ -234,6 +246,7 @@ a:hover {
   color: #ffffff;
   font-family: Georgia, 'Times New Roman', serif;
   margin-bottom: 12px;
+  font-size: 18px;
 }
 
 .ms-footer a {
@@ -255,14 +268,14 @@ a:hover {
   margin: 0 auto;
 }
 
-/* logo & decorative legal */
+/* logo & decorative legal - Left third */
 .ms-footer-brand {
   flex: 0 0 33.333%;
   max-width: 33.333%;
   padding-right: 20px;
 }
 
-/* middle footer third */
+/* middle footer third - Links */
 .ms-footer-links {
   flex: 0 0 33.333%;
   max-width: 33.333%;
@@ -286,10 +299,46 @@ a:hover {
   white-space: nowrap;
 }
 
-/* spacer for footer */
-.ms-footer-spacer {
+/* Social Media - Right third - Aligned to the right */
+.ms-footer-social {
   flex: 0 0 33.333%;
   max-width: 33.333%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ms-footer-social h4 {
+  margin-bottom: 12px;
+}
+
+.ms-social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ms-social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #D9E9D9 !important;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.ms-social-icons a:hover {
+  background-color: var(--ms-yellow);
+  color: var(--ms-green) !important;
+  transform: translateY(-3px);
+  text-decoration: none;
 }
 
 .ms-footer-bottom {
@@ -315,19 +364,23 @@ a:hover {
   .ms-footer-grid {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 30px;
   }
   
   .ms-footer-brand,
   .ms-footer-links,
-  .ms-footer-spacer {
+  .ms-footer-social {
     flex: 0 0 100%;
     max-width: 100%;
     padding: 0;
   }
   
-  .ms-footer-spacer {
-    display: none;
+  .ms-footer-social {
+    align-items: left;
+  }
+  
+  .ms-social-icons {
+    justify-content: flex-start;
   }
   
   /* On mobile, links wrap and stack */
@@ -335,6 +388,7 @@ a:hover {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: flex-start;
+    padding: 0;
   }
   
   .ms-footer-links-col {
