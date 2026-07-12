@@ -20,6 +20,330 @@
 }
 
 body {
-  padding-top: 40px; /* Adjust this number to match the height of your banner */
+  padding-top: 40px;
 }
 /*END OF REQUIRED CSS FOR STUDENT BANNER*/
+
+:root {
+  --ms-orange: #D97706;
+  --ms-yellow: #FBBF24;
+  --ms-green:  #2F6B3A;
+  --ms-cream:  #FFF8E7;
+  --ms-gray:   #333333;
+  --ms-orange-dark: #B45F05;
+  --banner-height: 40px;
+  --nav-height: 64px;
+}
+
+/* ---------------------------------------------------------------
+   basics
+   --------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: var(--ms-cream);
+  color: var(--ms-gray);
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  padding-top: var(--banner-height);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ms-orange);
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.3px;
+}
+
+a {
+  color: var(--ms-orange);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--ms-orange-dark);
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------
+   navbar
+   --------------------------------------------------------------- */
+.ms-top {
+  position: fixed;
+  top: var(--banner-height);
+  left: 0;
+  width: 100%;
+  z-index: 900;
+}
+
+.ms-navbar {
+  background-color: var(--ms-green);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.ms-navbar .ms-logo {
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.ms-navbar .ms-logo .bloom {
+  color: var(--ms-yellow);
+}
+
+.ms-navbar .ms-nav-links,
+.ms-navbar .ms-toggle {
+  margin-left: auto;
+}
+
+.ms-navbar .ms-nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.ms-navbar a.ms-nav-link {
+  color: #F1F7F1;
+  padding: 8px 14px;
+  font-size: 15px;
+}
+.ms-navbar a.ms-nav-link:hover {
+  color: var(--ms-yellow);
+  text-decoration: none;
+}
+
+.ms-navbar .ms-toggle {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1;
+  padding: 0 8px;
+}
+
+.ms-content-offset {
+  margin-top: var(--nav-height);
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------------------------------
+   mobile sidebar, this will be toggleable with a little hamburger icon on the right side when you switch to dev. mode 
+   --------------------------------------------------------------- */
+.ms-sidebar {
+  display: none;
+  position: fixed;
+  top: var(--banner-height);
+  left: 0;
+  height: calc(100% - var(--banner-height));
+  width: 280px;
+  z-index: 950;
+  background-color: var(--ms-green);
+  padding: 20px 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.ms-sidebar.ms-sidebar-open {
+  display: block;
+  transform: translateX(0);
+}
+
+.ms-sidebar a {
+  color: #F1F7F1 !important;
+  background: transparent !important;
+  padding: 14px 24px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-align: left;
+  width: 100%;
+  display: block;
+}
+
+.ms-sidebar a:hover {
+  color: var(--ms-yellow) !important;
+  background: rgba(255,255,255,0.08) !important;
+  text-decoration: none;
+}
+
+.ms-sidebar-close {
+  color: #fff !important;
+  font-size: 20px !important;
+  padding: 14px 24px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  font-weight: bold;
+}
+.ms-sidebar-close:hover {
+  color: var(--ms-yellow) !important;
+}
+
+/* sidebar overlay */
+.ms-sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: var(--banner-height);
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--banner-height));
+  background-color: rgba(0,0,0,0.5);
+  z-index: 940;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ms-sidebar-overlay.ms-sidebar-open {
+  display: block;
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------
+   buttons
+   --------------------------------------------------------------- */
+.ms-btn {
+  background-color: var(--ms-orange);
+  color: #ffffff !important;
+  border: none;
+  padding: 10px 22px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+.ms-btn:hover {
+  background-color: var(--ms-orange-dark);
+  text-decoration: none;
+}
+
+.ms-footer {
+  background-color: var(--ms-green);
+  color: #EAF3EA;
+  padding: 40px 24px 20px;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.ms-footer h4 {
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', serif;
+  margin-bottom: 12px;
+}
+
+.ms-footer a {
+  color: #D9E9D9;
+  display: block;
+  padding: 4px 0;
+  font-size: 14px;
+}
+.ms-footer a:hover {
+  color: var(--ms-yellow);
+  text-decoration: none;
+}
+
+.ms-footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* logo & decorative legal */
+.ms-footer-brand {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding-right: 20px;
+}
+
+/* middle footer third */
+.ms-footer-links {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.ms-footer-links-col {
+  flex: 0 1 auto;
+  min-width: 0;
+  text-align: center;
+}
+
+.ms-footer-links-col a {
+  padding: 4px 0;
+  white-space: nowrap;
+}
+
+/* spacer for footer */
+.ms-footer-spacer {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+
+.ms-footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 24px;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #C7DBC7;
+  width: 100%;
+}
+
+/* ---------------------------------------------------------------
+   adjustments for mobile
+   --------------------------------------------------------------- */
+@media (max-width: 601px) {
+  .ms-page-content { padding: 40px 18px; }
+  .ms-navbar .ms-logo { font-size: 18px; }
+  .ms-navbar { padding: 0 12px; }
+  .ms-sidebar { width: 260px; }
+  
+  /* Stack footer on mobile - full width */
+  .ms-footer-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .ms-footer-brand,
+  .ms-footer-links,
+  .ms-footer-spacer {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .ms-footer-spacer {
+    display: none;
+  }
+  
+  /* On mobile, links wrap and stack */
+  .ms-footer-links {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  .ms-footer-links-col {
+    flex: 0 0 auto;
+    min-width: 80px;
+    text-align: left;
+  }
+  
+  .ms-footer-links-col a {
+    white-space: normal;
+  }
+}

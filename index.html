@@ -1,19 +1,119 @@
-
 <!--Robert Reynolds-->
 <!-- Lilas Rabba -->
 <!-- Jazmin Martinez -->
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Website</title>
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body>
-        <!-- Required Educational Notice Banner -->
-        <div class="student-banner" role="status" aria-label="Educational Notice">
-            <p><strong>Notice:</strong> This is a fictional student project for educational purposes only.</p>
-        </div><!--End Required Educational Notice Banner -->
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magnolia Springs</title>
+  <!-- W3.CSS framework -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <!-- Custom template styling -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Required Educational Notice Banner -->
+<div class="student-banner" role="status" aria-label="Educational Notice">
+  <p><strong>Notice:</strong> This is a fictional student project for educational purposes only.</p>
+</div>
+
+<!-- ============================= NAVBAR ============================= -->
+<div class="ms-top">
+  <div class="w3-bar ms-navbar w3-card">
+    <a href="#" class="w3-bar-item ms-logo">(logo) Magnolia <span class="bloom">Springs</span></a>
+
+    <!-- desktop nav links -->
+    <div class="ms-nav-links w3-hide-small">
+      <a href="#" class="w3-bar-item w3-button ms-nav-link">Vendors</a>
+      <a href="#" class="w3-bar-item w3-button ms-nav-link">Gallery</a>
+      <a href="#" class="w3-bar-item w3-button ms-nav-link">Artists</a>
+      <a href="#" class="w3-bar-item w3-button ms-nav-link">Schedule</a>
+      <a href="#" class="w3-bar-item w3-button ms-btn" style="margin-left:10px;">Register</a>
+    </div>
+
+    <!-- mobile toggle -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-hide-medium ms-toggle" onclick="openSidebar()">
+      <i class="w3-xlarge">&#9776;</i>
+    </a>
+  </div>
+
+  <!-- mobile sidebar -->
+  <div id="mySidebar" class="ms-sidebar">
+    <a href="javascript:void(0)" onclick="closeSidebar()" class="ms-sidebar-close">Close &times;</a>
+    <a href="#" onclick="closeSidebar()" class="ms-nav-link">Vendors</a>
+    <a href="#" onclick="closeSidebar()" class="ms-nav-link">Gallery</a>
+    <a href="#" onclick="closeSidebar()" class="ms-nav-link">Artists</a>
+    <a href="#" onclick="closeSidebar()" class="ms-nav-link">Schedule</a>
+    <a href="#" onclick="closeSidebar()" class="ms-nav-link">Register</a>
+  </div>
+
+  <div id="mySidebarOverlay" class="ms-sidebar-overlay" onclick="closeSidebar()"></div>
+</div>
+
+<!-- pushes page content below the fixed banner + navbar -->
+<div class="ms-content-offset">
+
+  <!-- ============================= PAGE CONTENT ============================= -->
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  <p>placeholder text</p>
+  
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="ms-footer">
+    <div class="ms-footer-grid w3-content" style="max-width:1100px">
+      
+      <!-- logo/decorative legal -->
+      <div class="ms-footer-brand">
+        <h4>Logo</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+
+      <!-- add. nav links -->
+      <div class="ms-footer-links">
+        <div class="ms-footer-links-col"><a href="#">Vendors</a></div>
+        <div class="ms-footer-links-col"><a href="#">Gallery</a></div>
+        <div class="ms-footer-links-col"><a href="#">Artists</a></div>
+        <div class="ms-footer-links-col"><a href="#">Schedule</a></div>
+        <div class="ms-footer-links-col"><a href="#">Register</a></div>
+      </div>
+
+      <!-- empty space-->
+      <div class="ms-footer-spacer"></div>
+
+    </div>
+    <div class="ms-footer-bottom">
+      &copy; 2026 Magnolia Springs. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function openSidebar() {
+  document.getElementById("mySidebar").classList.add("ms-sidebar-open");
+  document.getElementById("mySidebarOverlay").classList.add("ms-sidebar-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").classList.remove("ms-sidebar-open");
+  document.getElementById("mySidebarOverlay").classList.remove("ms-sidebar-open");
+  document.body.style.overflow = "";
+}
+</script>
+
+</body>
 </html>
