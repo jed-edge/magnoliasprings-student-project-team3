@@ -1,0 +1,276 @@
+<!--Quentin Stephens-->
+
+<!--Robert Reynolds-->
+<!-- Lilas Rabba -->
+<!-- Jazmin Martinez -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magnolia Springs</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Required Educational Notice Banner -->
+<div class="student-banner" role="status" aria-label="Educational Notice">
+  <p><strong>Notice:</strong> This is a fictional student project for educational purposes only.</p>
+</div>
+
+<!-- ============================= NAVBAR ============================= -->
+<div class="ms-top">
+  <div class="w3-bar ms-navbar w3-card">
+    <a href="index.html" class="w3-bar-item ms-logo">
+    <img src="images/logo.png"
+         alt="Magnolia Springs Logo"
+         class="logo-img">
+
+    Magnolia <span class="bloom">Springs</span>
+</a>
+    <!-- desktop nav links -->
+    <div class="ms-nav-links w3-hide-small">
+      <a href="vendors.html" class="w3-bar-item w3-button ms-nav-link">Vendors</a>
+      <a href="gallery.html" class="w3-bar-item w3-button ms-nav-link">Gallery</a>
+      <a href="artists.html" class="w3-bar-item w3-button ms-nav-link">Artists</a>
+      <a href="schedule.html" class="w3-bar-item w3-button ms-nav-link">Schedule</a>
+      <a href="register.html" class="w3-bar-item w3-button ms-btn">Register</a>
+    </div>
+
+    <!-- mobile toggle -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-hide-medium ms-toggle" onclick="openSidebar()">
+      <i class="w3-xlarge">&#9776;</i>
+    </a>
+  </div>
+
+  <!-- mobile sidebar -->
+  <div id="mySidebar" class="ms-sidebar">
+    <a href="javascript:void(0)" onclick="closeSidebar()" class="ms-sidebar-close">Close &times;</a>
+    <a href="vendors.html" onclick="closeSidebar()" class="ms-nav-link">Vendors</a>
+    <a href="gallery.html" onclick="closeSidebar()" class="ms-nav-link">Gallery</a>
+    <a href="artists.html" onclick="closeSidebar()" class="ms-nav-link">Artists</a>
+    <a href="schedule.html" onclick="closeSidebar()" class="ms-nav-link">Schedule</a>
+    <a href="register.html" onclick="closeSidebar()" class="ms-nav-link">Register</a>
+  </div>
+
+  <div id="mySidebarOverlay" class="ms-sidebar-overlay" onclick="closeSidebar()"></div>
+</div>
+
+<!-- pushes page content below the fixed banner + navbar -->
+<div class="ms-content-offset">
+
+  <!-- ============================= PAGE CONTENT ============================= -->
+  <div class="ms-page-content ms-reg-page">
+    <div class="ms-reg-intro">
+      <h1>Vendor &amp; Artist Registration</h1>
+      <p>Join us for Magnolia Springs! Fill out the form below to apply as a vendor or artist. Our team reviews every submission and will follow up by email within 5&ndash;7 business days.</p>
+    </div>
+
+    <div class="ms-reg-layout">
+
+      <!-- Registration form -->
+      <div class="ms-reg-card">
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+          <div class="ms-reg-form-grid">
+
+            <div class="ms-reg-field">
+              <label for="full-name">Full Name <span class="ms-reg-req">*</span></label>
+              <input type="text" id="full-name" name="full-name" placeholder="Jane Doe" required>
+            </div>
+
+            <div class="ms-reg-field">
+              <label for="business-name">Business / Artist Name</label>
+              <input type="text" id="business-name" name="business-name" placeholder="Springside Pottery">
+            </div>
+
+            <div class="ms-reg-field">
+              <label for="email">Email <span class="ms-reg-req">*</span></label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+            </div>
+
+            <div class="ms-reg-field">
+              <label for="phone">Phone Number <span class="ms-reg-req">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+            </div>
+
+            <div class="ms-reg-field">
+              <label for="applicant-type">I am registering as a... <span class="ms-reg-req">*</span></label>
+              <select id="applicant-type" name="applicant-type" required>
+                <option value="" selected disabled>Select one</option>
+                <option value="vendor">Vendor</option>
+                <option value="artist">Artist</option>
+                <option value="both">Both</option>
+              </select>
+            </div>
+
+            <div class="ms-reg-field">
+              <label for="booth-size">Preferred Booth Size <span class="ms-reg-req">*</span></label>
+              <select id="booth-size" name="booth-size" required>
+                <option value="" selected disabled>Select one</option>
+                <option value="single">Single (10x10)</option>
+                <option value="double">Double (10x20)</option>
+                <option value="artist-table">Artist Table</option>
+              </select>
+            </div>
+
+            <div class="ms-reg-field ms-reg-span-2">
+              <label>Category (select all that apply)</label>
+              <div class="ms-reg-checkbox-group">
+                <label><input type="checkbox" name="category" value="food"> Food &amp; Drink</label>
+                <label><input type="checkbox" name="category" value="crafts"> Handmade Crafts</label>
+                <label><input type="checkbox" name="category" value="fine-art"> Fine Art</label>
+                <label><input type="checkbox" name="category" value="jewelry"> Jewelry</label>
+                <label><input type="checkbox" name="category" value="music"> Live Music/Performance</label>
+                <label><input type="checkbox" name="category" value="other"> Other</label>
+              </div>
+            </div>
+
+            <div class="ms-reg-field ms-reg-span-2">
+              <label for="message">Tell us about your business or work</label>
+              <textarea id="message" name="message" placeholder="Share a short description of what you'll be selling or showcasing..."></textarea>
+            </div>
+
+            <div class="ms-reg-field ms-reg-span-2">
+              <label for="website">Website or Social Media Link (anything can go here!)</label>
+              <input type="text" id="website" name="website" placeholder="https://instagram.com/yourbrand">
+            </div>
+
+            <div class="ms-reg-field ms-reg-span-2">
+              <div class="ms-reg-terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the event's vendor/artist terms and cancellation policy. <span class="ms-reg-req">*</span></label>
+              </div>
+            </div>
+
+            <div class="ms-reg-field ms-reg-span-2 ms-reg-submit-row">
+              <button type="submit" class="ms-btn">Submit Application</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar info panel -->
+      <div class="ms-reg-card">
+        <h2>Before You Apply</h2>
+        <ul class="ms-reg-info-list">
+          <li>Applications are reviewed on a rolling basis, so early submissions are encouraged.</li>
+          <li>A confirmation email will be sent once your spot is secured.</li>
+          <li>Booth fees are due within 10 days of acceptance.</li>
+          <li>All vendors must provide their own tables, tents, and signage.</li>
+          <li>Food vendors must include a valid health permit number in their application.</li>
+        </ul>
+        <p class="ms-reg-note">Questions? Reach out to us through any of the social links in the footer below, and a member of our team will get back to you.</p>
+      </div>
+
+    </div>
+
+    <!-- Booth pricing table -->
+    <div class="ms-reg-table-wrap">
+      <h2>Booth Pricing</h2>
+      <table class="ms-reg-table">
+        <caption>Pricing shown reflects early-registration rates and is subject to change after the early deadline.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Booth Type</th>
+            <th scope="col">Dimensions</th>
+            <th scope="col">Price</th>
+            <th scope="col">Includes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Artist Table</td>
+            <td>6 ft table</td>
+            <td>$45</td>
+            <td>1 table, 2 chairs</td>
+          </tr>
+          <tr>
+            <td>Single Booth</td>
+            <td>10 x 10 ft</td>
+            <td>$85</td>
+            <td>1 table, 2 chairs, signage spot</td>
+          </tr>
+          <tr>
+            <td>Double Booth</td>
+            <td>10 x 20 ft</td>
+            <td>$150</td>
+            <td>2 tables, 4 chairs, signage spot</td>
+          </tr>
+          <tr>
+            <td>Food Vendor</td>
+            <td>15 x 15 ft</td>
+            <td>$200</td>
+            <td>Power access, water access point</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="ms-footer">
+    <div class="ms-footer-grid w3-content" style="max-width:1100px">
+      
+      <!-- logo/decorative legal -->
+      <div class="ms-footer-brand">
+
+    <img src="images/logo.png"
+         alt="Magnolia Springs Logo"
+         class="footer-logo">
+
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+
+</div>
+
+      <!-- add. nav links -->
+      <div class="ms-footer-links">
+        <div class="ms-footer-links-col"><a href="vendors.html">Vendors</a></div>
+        <div class="ms-footer-links-col"><a href="gallery.html">Gallery</a></div>
+        <div class="ms-footer-links-col"><a href="artists.html">Artists</a></div>
+        <div class="ms-footer-links-col"><a href="schedule.html">Schedule</a></div>
+        <div class="ms-footer-links-col"><a href="register.html">Register</a></div>
+      </div>
+
+      <!-- Social Media - Right side -->
+      <div class="ms-footer-social">
+        <h4>Follow Us</h4>
+        <div class="ms-social-icons">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com" target="_blank"  aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank"  aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com" target="_blank"  aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.pinterest.com" target="_blank"  aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="ms-footer-bottom">
+      &copy; 2024 Magnolia Springs. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function openSidebar() {
+  document.getElementById("mySidebar").classList.add("ms-sidebar-open");
+  document.getElementById("mySidebarOverlay").classList.add("ms-sidebar-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").classList.remove("ms-sidebar-open");
+  document.getElementById("mySidebarOverlay").classList.remove("ms-sidebar-open");
+  document.body.style.overflow = "";
+}
+</script>
+
+</body>
+</html>

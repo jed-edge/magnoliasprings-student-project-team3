@@ -489,8 +489,230 @@ table{
     color:white;
 }
 
-
 }
+
+/* for forms.html */
+.ms-reg-page .ms-reg-intro {
+        max-width: 800px;
+        margin: 0 auto 40px;
+        text-align: center;
+      }
+
+      .ms-reg-page .ms-reg-intro h1 {
+        margin-bottom: 12px;
+      }
+
+      .ms-reg-page .ms-reg-intro p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      /* Two-column responsive grid layout for the form + sidebar info */
+      .ms-reg-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: start;
+      }
+
+      .ms-reg-card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      }
+
+      .ms-reg-card h2 {
+        margin-top: 0;
+        font-size: 22px;
+        border-bottom: 2px solid var(--ms-yellow);
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+
+      /* Form fields laid out in their own responsive 2-column grid */
+      .ms-reg-form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 20px;
+      }
+
+      .ms-reg-field {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ms-reg-field.ms-reg-span-2 {
+        grid-column: 1 / -1;
+      }
+
+      .ms-reg-field label {
+        font-weight: 600;
+        margin-bottom: 6px;
+        font-size: 14px;
+        color: var(--ms-gray);
+      }
+
+      .ms-reg-field .ms-reg-req {
+        color: var(--ms-orange);
+      }
+
+      .ms-reg-field input[type="text"],
+      .ms-reg-field input[type="email"],
+      .ms-reg-field input[type="tel"],
+      .ms-reg-field select,
+      .ms-reg-field textarea {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px 12px;
+        font-family: inherit;
+        font-size: 15px;
+        color: var(--ms-gray);
+        background-color: #fffdf7;
+      }
+
+      .ms-reg-field input:focus,
+      .ms-reg-field select:focus,
+      .ms-reg-field textarea:focus {
+        outline: none;
+        border-color: var(--ms-orange);
+      }
+
+      .ms-reg-field textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .ms-reg-checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+      }
+
+      .ms-reg-checkbox-group label {
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+      }
+
+      .ms-reg-terms {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 14px;
+      }
+
+      .ms-reg-terms input {
+        margin-top: 3px;
+      }
+
+      .ms-reg-submit-row {
+        margin-top: 10px;
+      }
+
+      .ms-reg-submit-row .ms-btn {
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+      }
+
+      /* Sidebar info panel */
+      .ms-reg-info-list {
+        padding-left: 20px;
+        margin: 0 0 20px;
+      }
+
+      .ms-reg-info-list li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        font-size: 14.5px;
+      }
+
+      .ms-reg-note {
+        font-size: 13.5px;
+        line-height: 1.6;
+        color: #555;
+        border-top: 1px solid #eee;
+        padding-top: 14px;
+      }
+
+      /* Booth pricing table */
+      .ms-reg-table-wrap {
+        max-width: 1100px;
+        margin: 50px auto 0;
+      }
+
+      .ms-reg-table-wrap h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      table.ms-reg-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      }
+
+      table.ms-reg-table caption {
+        caption-side: bottom;
+        font-size: 13px;
+        color: #666;
+        padding: 10px 4px 0;
+        text-align: left;
+      }
+
+      table.ms-reg-table th,
+      table.ms-reg-table td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+        font-size: 14.5px;
+      }
+
+      table.ms-reg-table thead th {
+        background-color: var(--ms-green);
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      table.ms-reg-table tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      table.ms-reg-table tbody tr:nth-child(even) {
+        background-color: var(--ms-cream);
+      }
+
+      /* Tablet breakpoint */
+      @media (max-width: 900px) {
+        .ms-reg-layout {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Phone breakpoint (matches existing site breakpoint) */
+      @media (max-width: 601px) {
+        .ms-reg-form-grid {
+          grid-template-columns: 1fr;
+        }
+        .ms-reg-card {
+          padding: 22px;
+        }
+        table.ms-reg-table th,
+        table.ms-reg-table td {
+          padding: 10px 8px;
+          font-size: 13.5px;
+        }
+      }
+/* end forms.html styling
+
 
 
 
