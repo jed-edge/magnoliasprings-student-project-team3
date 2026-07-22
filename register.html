@@ -1,0 +1,185 @@
+
+<!--Quentin Stephens-->
+
+<!--Robert Reynolds-->
+<!-- Lilas Rabba -->
+<!-- Jazmin Martinez -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register-Magnolia Springs</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Required Educational Notice Banner -->
+<div class="student-banner" role="status" aria-label="Educational Notice">
+  <p><strong>Notice:</strong> This is a fictional student project for educational purposes only.</p>
+</div>
+
+<!-- ============================= NAVBAR ============================= -->
+<div class="ms-top">
+  <div class="w3-bar ms-navbar w3-card">
+    <a href="index.html" class="w3-bar-item ms-logo">
+    <img src="images/logo.png"
+         alt="Magnolia Springs Logo"
+         class="logo-img">
+
+    Magnolia <span class="bloom">Springs</span>
+</a>
+    <!-- desktop nav links -->
+    <div class="ms-nav-links w3-hide-small">
+      <a href="vendors.html" class="w3-bar-item w3-button ms-nav-link">Vendors</a>
+      <a href="gallery.html" class="w3-bar-item w3-button ms-nav-link">Gallery</a>
+      <a href="artists.html" class="w3-bar-item w3-button ms-nav-link">Artists</a>
+      <a href="schedule.html" class="w3-bar-item w3-button ms-nav-link">Schedule</a>
+      <a href="register.html" class="w3-bar-item w3-button ms-btn" style="margin-left:10px;">Register</a>
+    </div>
+
+    <!-- mobile toggle -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-hide-medium ms-toggle" onclick="openSidebar()">
+      <i class="w3-xlarge">&#9776;</i>
+    </a>
+  </div>
+
+  <!-- mobile sidebar -->
+  <div id="mySidebar" class="ms-sidebar">
+    <a href="javascript:void(0)" onclick="closeSidebar()" class="ms-sidebar-close">Close &times;</a>
+    <a href="vendors.html" onclick="closeSidebar()" class="ms-nav-link">Vendors</a>
+    <a href="gallery.html" onclick="closeSidebar()" class="ms-nav-link">Gallery</a>
+    <a href="artists.html" onclick="closeSidebar()" class="ms-nav-link">Artists</a>
+    <a href="schedule.html" onclick="closeSidebar()" class="ms-nav-link">Schedule</a>
+    <a href="register.html" onclick="closeSidebar()" class="ms-nav-link">Register</a>
+  </div>
+
+  <div id="mySidebarOverlay" class="ms-sidebar-overlay" onclick="closeSidebar()"></div>
+</div>
+
+<!-- pushes page content below the fixed banner + navbar -->
+<div class="ms-content-offset">
+
+  <!-- ============================= PAGE CONTENT ============================= -->
+  <main class="ms-page-content w3-content" style="max-width:1100px">
+
+ <section class="register-section">
+
+    <h1>Vendor & Artist Registration</h1>
+
+    <p class="register-intro">
+        Complete the form below to apply as a festival vendor or performer.
+        All required fields must be completed before submitting.
+    </p>
+
+    <form class="register-form">
+
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+        <label for="business">Business or Artist Name</label>
+        <input type="text" id="business" name="business" placeholder="Business or stage name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+
+        <label for="type">Vendor Type or Music Genre</label>
+        <input type="text" id="type" name="type" placeholder="Food Vendor, Folk, Jazz...">
+
+        <label for="day">Preferred Event Day</label>
+
+        <select id="day" name="day">
+
+            <option>Friday</option>
+
+            <option>Saturday</option>
+
+            <option>Sunday</option>
+
+        </select>
+
+        <label for="comments">Additional Information</label>
+
+        <textarea id="comments" rows="5" placeholder="Tell us about yourself..."></textarea>
+
+        <div class="register-buttons">
+
+            <button type="submit" class="ms-btn">Submit</button>
+
+            <button type="reset" class="ms-btn">Reset</button>
+
+        </div>
+
+    </form>
+
+</section>
+
+</main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="ms-footer">
+    <div class="ms-footer-grid w3-content" style="max-width:1100px">
+      
+      <!-- logo/decorative legal -->
+      <div class="ms-footer-brand">
+
+    <img src="images/logo.png"
+         alt="Magnolia Springs Logo"
+         class="footer-logo">
+
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+
+</div>
+
+      <!-- add. nav links -->
+      <div class="ms-footer-links">
+        <div class="ms-footer-links-col"><a href="vendors.html">Vendors</a></div>
+        <div class="ms-footer-links-col"><a href="gallery.html">Gallery</a></div>
+        <div class="ms-footer-links-col"><a href="artists.html">Artists</a></div>
+        <div class="ms-footer-links-col"><a href="schedule.html">Schedule</a></div>
+        <div class="ms-footer-links-col"><a href="register.html">Register</a></div>
+      </div>
+
+      <!-- Social Media - Right side -->
+      <div class="ms-footer-social">
+        <h4>Follow Us</h4>
+        <div class="ms-social-icons">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com" target="_blank"  aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank"  aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com" target="_blank"  aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.pinterest.com" target="_blank"  aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="ms-footer-bottom">
+      &copy; 2024 Magnolia Springs. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+function openSidebar() {
+  document.getElementById("mySidebar").classList.add("ms-sidebar-open");
+  document.getElementById("mySidebarOverlay").classList.add("ms-sidebar-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").classList.remove("ms-sidebar-open");
+  document.getElementById("mySidebarOverlay").classList.remove("ms-sidebar-open");
+  document.body.style.overflow = "";
+}
+</script>
+
+</body>
+</html>
