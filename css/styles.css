@@ -713,6 +713,199 @@ table{
       }
 /* end forms.html styling
 
+/* ===========================
+   Artists Page
+=========================== */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(135deg, var(--ms-green), var(--ms-orange));
+    color: white;
+    padding: 60px 20px;
+}
+
+header h1,
+header p,
+header nav a {
+    color: white;
+}
+
+header nav {
+    margin-top: 20px;
+}
+
+header nav a {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+section {
+    margin: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section > p {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* Hero Image */
+
+section:first-of-type img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 25px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* Artist Cards */
+
+#artists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 30px;
+}
+
+#artists h2,
+#artists > p {
+    grid-column: 1/-1;
+}
+
+#artists article {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+#artists article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,.15);
+}
+
+#artists article img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+#artists article h3 {
+    padding: 20px 20px 10px;
+}
+
+#artists article p {
+    padding: 0 20px 15px;
+    line-height: 1.6;
+}
+
+/* Schedule */
+
+#schedule ol {
+    background: white;
+    padding: 25px 40px;
+    border-left: 5px solid var(--ms-orange);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.06);
+}
+
+/* Vendors */
+
+#vendors img {
+    width: 48%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 10px 1%;
+    box-shadow: 0 5px 12px rgba(0,0,0,.1);
+}
+
+#vendors ul {
+    margin-top: 25px;
+}
+
+/* Memories */
+
+#memories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+
+#memories h2 {
+    grid-column: 1/-1;
+}
+
+#memories figure {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+#memories img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+#memories figcaption {
+    padding: 18px;
+    line-height: 1.6;
+}
+
+/* Footer */
+
+footer {
+    background: var(--ms-green);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h2,
+footer p,
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--ms-yellow);
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    #vendors img{
+        width:100%;
+        margin:10px 0;
+    }
+
+    header{
+        padding:40px 15px;
+    }
+
+    header h1{
+        font-size:32px;
+    }
+
+}
 
 
 
