@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Magnolia Springs Harvest Arts Festival artist lineup and vendor information.">
-  <title>Artists | Magnolia Springs Harvest Arts Festival</title>
-
-<link rel="stylesheet" href="css/styles.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magnolia Springs</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -16,18 +15,46 @@
   <p><strong>Notice:</strong> This is a fictional student project for educational purposes only.</p>
 </div>
 
-</aside>
-  <header>
-    <h1>Magnolia Springs Harvest Arts Festival</h1>
-    <p>October 18-20, 2024 | Magnolia Springs, Georgia</p>
+ <!-- ============================= NAVBAR ============================= -->
+<div class="ms-top">
+  <div class="w3-bar ms-navbar w3-card">
+    <a href="index.html" class="w3-bar-item ms-logo">
+    <img src="images/logo.png"
+         alt="Magnolia Springs Logo"
+         class="logo-img">
 
-    <nav aria-label="Main navigation">
-      <a href="#artists">Artists</a> |
-      <a href="#schedule">Schedule</a> |
-      <a href="#vendors">Vendors</a> |
-      <a href="#memories">Past Events</a>
-    </nav>
-  </header>
+    Magnolia <span class="bloom">Springs</span>
+</a>
+    <!-- desktop nav links -->
+    <div class="ms-nav-links w3-hide-small">
+      <a href="vendors.html" class="w3-bar-item w3-button ms-nav-link">Vendors</a>
+      <a href="gallery.html" class="w3-bar-item w3-button ms-nav-link">Gallery</a>
+      <a href="artists.html" class="w3-bar-item w3-button ms-nav-link">Artists</a>
+      <a href="schedule.html" class="w3-bar-item w3-button ms-nav-link">Schedule</a>
+      <a href="register.html" class="w3-bar-item w3-button ms-btn">Register</a>
+    </div>
+
+    <!-- mobile toggle -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-hide-medium ms-toggle" onclick="openSidebar()">
+      <i class="w3-xlarge">&#9776;</i>
+    </a>
+  </div>
+
+  <!-- mobile sidebar -->
+  <div id="mySidebar" class="ms-sidebar">
+    <a href="javascript:void(0)" onclick="closeSidebar()" class="ms-sidebar-close">Close &times;</a>
+    <a href="vendors.html" onclick="closeSidebar()" class="ms-nav-link">Vendors</a>
+    <a href="gallery.html" onclick="closeSidebar()" class="ms-nav-link">Gallery</a>
+    <a href="artists.html" onclick="closeSidebar()" class="ms-nav-link">Artists</a>
+    <a href="schedule.html" onclick="closeSidebar()" class="ms-nav-link">Schedule</a>
+    <a href="register.html" onclick="closeSidebar()" class="ms-nav-link">Register</a>
+  </div>
+
+  <div id="mySidebarOverlay" class="ms-sidebar-overlay" onclick="closeSidebar()"></div>
+</div>
+
+<!-- pushes page content below the fixed banner + navbar -->
+<div class="ms-content-offset">
 
   <main>
 
@@ -140,31 +167,6 @@
       </article>
     </section>
 
-    <section id="schedule">
-      <h2>Festival Schedule</h2>
-
-      <h3>Friday, October 18</h3>
-      <ol>
-        <li>4:00 PM - Gates and vendor market open</li>
-        <li>6:00 PM - The Juniper Row</li>
-        <li>8:15 PM - Marisol Vale</li>
-      </ol>
-
-      <h3>Saturday, October 19</h3>
-      <ol>
-        <li>10:00 AM - Vendor market and food court open</li>
-        <li>12:30 PM - Peachtree Brass Co.</li>
-        <li>3:30 PM - River &amp; the Pines</li>
-        <li>6:45 PM - DJ Sunny Side</li>
-      </ol>
-
-      <h3>Sunday, October 20</h3>
-      <ol>
-        <li>10:00 AM - Festival grounds open</li>
-        <li>12:00 PM - Local songwriter circle</li>
-        <li>3:30 PM - Hollow Creek Revival</li>
-      </ol>
-    </section>
 
     <section id="vendors">
       <h2>Local Vendors, Food, and Handmade Goods</h2>
