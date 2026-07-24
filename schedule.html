@@ -8,24 +8,44 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
-</head>
 
-
-<!--Quentin Stephens-->
-
-<!--Robert Reynolds-->
-<!-- Lilas Rabba -->
-<!-- Jazmin Martinez -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Magnolia Springs</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Adjusted for 2 items (Friday/Saturday) after removing Sunday,
+       so the layout fills the row width and rows stay aligned.
+       If css/styles.css defines ms-day-grid / ms-info-card with a
+       fixed 3-column rule, this override takes precedence. */
+    .ms-schedule-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .ms-day-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+    .ms-day-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .ms-day-table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+    }
+    .ms-day-table th,
+    .ms-day-table td {
+      word-wrap: break-word;
+    }
+    @media (max-width: 700px) {
+      .ms-schedule-info,
+      .ms-day-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -46,15 +66,6 @@
       Magnolia <span class="bloom">Springs</span>
     </a>
 
-<div class="ms-top">
-  <div class="w3-bar ms-navbar w3-card">
-    <a href="index.html" class="w3-bar-item ms-logo">
-    <img src="images/logo.png"
-         alt="Magnolia Springs Logo"
-         class="logo-img">
-
-    Magnolia <span class="bloom">Springs</span>
-</a>
     <!-- desktop nav links -->
     <div class="ms-nav-links w3-hide-small">
       <a href="vendors.html" class="w3-bar-item w3-button ms-nav-link">Vendors</a>
@@ -73,22 +84,6 @@
   </div>
 
   <!-- Mobile Sidebar -->
-
-  <div id="mySidebar" class="ms-sidebar">
-
-    <a href="javascript:void(0)"
-       onclick="closeSidebar()"
-       class="ms-sidebar-close">
-       Close &times;
-    </a>
-
-    <!-- mobile toggle -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-hide-medium ms-toggle" onclick="openSidebar()">
-      <i class="w3-xlarge">&#9776;</i>
-    </a>
-  </div>
-
-  <!-- mobile sidebar -->
   <div id="mySidebar" class="ms-sidebar">
     <a href="javascript:void(0)" onclick="closeSidebar()" class="ms-sidebar-close">Close &times;</a>
     <a href="vendors.html" onclick="closeSidebar()" class="ms-nav-link">Vendors</a>
@@ -96,16 +91,13 @@
     <a href="artists.html" onclick="closeSidebar()" class="ms-nav-link">Artists</a>
     <a href="schedule.html" onclick="closeSidebar()" class="ms-nav-link">Schedule</a>
     <a href="register.html" onclick="closeSidebar()" class="ms-nav-link">Register</a>
-
   </div>
 
-  <div id="mySidebarOverlay"
-       class="ms-sidebar-overlay"
-       onclick="closeSidebar()">
-  </div>
+  <div id="mySidebarOverlay" class="ms-sidebar-overlay" onclick="closeSidebar()"></div>
 
 </div>
 
+<!-- pushes page content below the fixed banner + navbar -->
 <div class="ms-content-offset">
 
 <main class="ms-page-content">
@@ -152,7 +144,7 @@
 
 <p>October 18</p>
 
-<span>4:00 PM – 10:00 PM</span>
+<span>10:00 AM – 10:00 PM</span>
 
 </div>
 
@@ -165,18 +157,6 @@
 <p>October 19</p>
 
 <span>10:00 AM – 10:00 PM</span>
-
-</div>
-
-<div class="ms-info-card">
-
-<i class="fa-solid fa-star"></i>
-
-<h3>Sunday</h3>
-
-<p>October 20</p>
-
-<span>10:00 AM – 5:00 PM</span>
 
 </div>
 
@@ -204,13 +184,18 @@
 </tr>
 
 <tr>
-<td>4:00 PM</td>
+<td>10:00 AM</td>
 <td>Festival Gates Open</td>
 </tr>
 
 <tr>
-<td>5:00 PM</td>
+<td>11:00 AM</td>
 <td>Food Court Opens</td>
+</tr>
+
+<tr>
+  <td>3:00 PM</td>
+  <td>Magnolia Springs Slam Poetry</td>
 </tr>
 
 <tr>
@@ -286,54 +271,7 @@
 
 <tr>
 <td>9:00 PM</td>
-<td>Festival Fireworks</td>
-</tr>
-
-</table>
-
-</div>
-
-<!-- ================= Sunday ================= -->
-
-<div class="ms-day-card">
-
-<h3>Sunday</h3>
-
-<table class="ms-day-table">
-
-<tr>
-<th>Time</th>
-<th>Event</th>
-</tr>
-
-<tr>
-<td>10:00 AM</td>
-<td>Festival Opens</td>
-</tr>
-
-<tr>
-<td>11:00 AM</td>
-<td>Local Artisan Market</td>
-</tr>
-
-<tr>
-<td>12:00 PM</td>
-<td>Songwriter Circle</td>
-</tr>
-
-<tr>
-<td>2:00 PM</td>
-<td>Community Awards</td>
-</tr>
-
-<tr>
-<td>3:30 PM</td>
-<td>Hollow Creek Revival</td>
-</tr>
-
-<tr>
-<td>5:00 PM</td>
-<td>Festival Closing Ceremony</td>
+<td>Festival Fireworks, Hollow Creek Revival performance</td>
 </tr>
 
 </table>
@@ -410,6 +348,8 @@ Register Now
 
 </main>
 
+</div><!-- /ms-content-offset -->
+
 <!-- ============================= FOOTER ============================= -->
 
 <footer class="ms-footer">
@@ -464,105 +404,8 @@ Register Now
 </div>
 
 </footer>
-  </div>
-
-  <div id="mySidebarOverlay" class="ms-sidebar-overlay" onclick="closeSidebar()"></div>
-</div>
-
-<!-- pushes page content below the fixed banner + navbar -->
-<div class="ms-content-offset">
-
-  <!-- ============================= PAGE CONTENT ============================= -->
-  <main class="ms-page-content w3-content" style="max-width:1100px">
-
-  <section id="schedule">
-      <h2>Festival Schedule</h2>
-
-      <h3>Friday, October 18</h3>
-      <ol>
-        <li>10:00 AM - Gates, food court, vendor market open</li>
-        <li> 3:00 PM - Hollow Creek Revival</li>
-        <li>6:00 PM - The Juniper Row</li>
-        <li>8:15 PM - Marisol Vale</li>
-      </ol>
-
-      <h3>Saturday, October 19</h3>
-      <ol>
-        <li>10:00 AM - Gates, food court, vendor market open</li>
-        <li>12:30 PM - Peachtree Brass Co.</li>
-        <li>6:45 PM - DJ Sunny Side</li>
-        <li> 9:00 PM - River & the Pines </li>
-      </ol>
-    </section>
-
-</main>
-
-  <!-- ============================= FOOTER ============================= -->
-  <footer class="ms-footer">
-    <div class="ms-footer-grid w3-content" style="max-width:1100px">
-      
-      <!-- logo/decorative legal -->
-      <div class="ms-footer-brand">
-
-    <img src="images/logo.png"
-         alt="Magnolia Springs Logo"
-         class="footer-logo">
-
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
-
-</div>
-
-      <!-- add. nav links -->
-      <div class="ms-footer-links">
-        <div class="ms-footer-links-col"><a href="vendors.html">Vendors</a></div>
-        <div class="ms-footer-links-col"><a href="gallery.html">Gallery</a></div>
-        <div class="ms-footer-links-col"><a href="artists.html">Artists</a></div>
-        <div class="ms-footer-links-col"><a href="schedule.html">Schedule</a></div>
-        <div class="ms-footer-links-col"><a href="register.html">Register</a></div>
-      </div>
-
-      <!-- Social Media - Right side -->
-      <div class="ms-footer-social">
-        <h4>Follow Us</h4>
-        <div class="ms-social-icons">
-          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com" target="_blank"  aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com" target="_blank"  aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.youtube.com" target="_blank"  aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="https://www.pinterest.com" target="_blank"  aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-        </div>
-      </div>
-
-    </div>
-    <div class="ms-footer-bottom">
-      &copy; 2024 Magnolia Springs. All rights reserved.
-    </div>
-  </footer>
-
-</div>
 
 <script>
-
-function openSidebar(){
-
-document.getElementById("mySidebar").classList.add("ms-sidebar-open");
-
-document.getElementById("mySidebarOverlay").classList.add("ms-sidebar-open");
-
-document.body.style.overflow="hidden";
-
-}
-
-function closeSidebar(){
-
-document.getElementById("mySidebar").classList.remove("ms-sidebar-open");
-
-document.getElementById("mySidebarOverlay").classList.remove("ms-sidebar-open");
-
-document.body.style.overflow="";
-
-}
 
 function openSidebar() {
   document.getElementById("mySidebar").classList.add("ms-sidebar-open");
@@ -575,6 +418,7 @@ function closeSidebar() {
   document.getElementById("mySidebarOverlay").classList.remove("ms-sidebar-open");
   document.body.style.overflow = "";
 }
+
 </script>
 
 </body>
