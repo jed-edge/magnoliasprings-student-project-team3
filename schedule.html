@@ -10,6 +10,23 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
+
+<!--Quentin Stephens-->
+
+<!--Robert Reynolds-->
+<!-- Lilas Rabba -->
+<!-- Jazmin Martinez -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magnolia Springs</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 <body>
 
 <!-- Required Educational Notice Banner -->
@@ -29,6 +46,16 @@
       Magnolia <span class="bloom">Springs</span>
     </a>
 
+<div class="ms-top">
+  <div class="w3-bar ms-navbar w3-card">
+    <a href="index.html" class="w3-bar-item ms-logo">
+    <img src="images/logo.png"
+         alt="Magnolia Springs Logo"
+         class="logo-img">
+
+    Magnolia <span class="bloom">Springs</span>
+</a>
+    <!-- desktop nav links -->
     <div class="ms-nav-links w3-hide-small">
       <a href="vendors.html" class="w3-bar-item w3-button ms-nav-link">Vendors</a>
       <a href="gallery.html" class="w3-bar-item w3-button ms-nav-link">Gallery</a>
@@ -55,6 +82,15 @@
        Close &times;
     </a>
 
+    <!-- mobile toggle -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hide-large w3-hide-medium ms-toggle" onclick="openSidebar()">
+      <i class="w3-xlarge">&#9776;</i>
+    </a>
+  </div>
+
+  <!-- mobile sidebar -->
+  <div id="mySidebar" class="ms-sidebar">
+    <a href="javascript:void(0)" onclick="closeSidebar()" class="ms-sidebar-close">Close &times;</a>
     <a href="vendors.html" onclick="closeSidebar()" class="ms-nav-link">Vendors</a>
     <a href="gallery.html" onclick="closeSidebar()" class="ms-nav-link">Gallery</a>
     <a href="artists.html" onclick="closeSidebar()" class="ms-nav-link">Artists</a>
@@ -428,6 +464,81 @@ Register Now
 </div>
 
 </footer>
+  </div>
+
+  <div id="mySidebarOverlay" class="ms-sidebar-overlay" onclick="closeSidebar()"></div>
+</div>
+
+<!-- pushes page content below the fixed banner + navbar -->
+<div class="ms-content-offset">
+
+  <!-- ============================= PAGE CONTENT ============================= -->
+  <main class="ms-page-content w3-content" style="max-width:1100px">
+
+  <section id="schedule">
+      <h2>Festival Schedule</h2>
+
+      <h3>Friday, October 18</h3>
+      <ol>
+        <li>10:00 AM - Gates, food court, vendor market open</li>
+        <li> 3:00 PM - Hollow Creek Revival</li>
+        <li>6:00 PM - The Juniper Row</li>
+        <li>8:15 PM - Marisol Vale</li>
+      </ol>
+
+      <h3>Saturday, October 19</h3>
+      <ol>
+        <li>10:00 AM - Gates, food court, vendor market open</li>
+        <li>12:30 PM - Peachtree Brass Co.</li>
+        <li>6:45 PM - DJ Sunny Side</li>
+        <li> 9:00 PM - River & the Pines </li>
+      </ol>
+    </section>
+
+</main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="ms-footer">
+    <div class="ms-footer-grid w3-content" style="max-width:1100px">
+      
+      <!-- logo/decorative legal -->
+      <div class="ms-footer-brand">
+
+    <img src="images/logo.png"
+         alt="Magnolia Springs Logo"
+         class="footer-logo">
+
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+
+</div>
+
+      <!-- add. nav links -->
+      <div class="ms-footer-links">
+        <div class="ms-footer-links-col"><a href="vendors.html">Vendors</a></div>
+        <div class="ms-footer-links-col"><a href="gallery.html">Gallery</a></div>
+        <div class="ms-footer-links-col"><a href="artists.html">Artists</a></div>
+        <div class="ms-footer-links-col"><a href="schedule.html">Schedule</a></div>
+        <div class="ms-footer-links-col"><a href="register.html">Register</a></div>
+      </div>
+
+      <!-- Social Media - Right side -->
+      <div class="ms-footer-social">
+        <h4>Follow Us</h4>
+        <div class="ms-social-icons">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com" target="_blank"  aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank"  aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com" target="_blank"  aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.pinterest.com" target="_blank"  aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="ms-footer-bottom">
+      &copy; 2024 Magnolia Springs. All rights reserved.
+    </div>
+  </footer>
 
 </div>
 
@@ -453,6 +564,17 @@ document.body.style.overflow="";
 
 }
 
+function openSidebar() {
+  document.getElementById("mySidebar").classList.add("ms-sidebar-open");
+  document.getElementById("mySidebarOverlay").classList.add("ms-sidebar-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeSidebar() {
+  document.getElementById("mySidebar").classList.remove("ms-sidebar-open");
+  document.getElementById("mySidebarOverlay").classList.remove("ms-sidebar-open");
+  document.body.style.overflow = "";
+}
 </script>
 
 </body>
