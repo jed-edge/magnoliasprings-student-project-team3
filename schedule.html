@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magnolia Springs | Schedule</title>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- Required Educational Notice Banner -->
+<div class="student-banner" role="status" aria-label="Educational Notice">
+  <p><strong>Notice:</strong> This is a fictional student project for educational purposes only.</p>
+</div>
+
+<!-- ============================= NAVBAR ============================= -->
+
+<div class="ms-top">
+  <div class="w3-bar ms-navbar w3-card">
+
+    <a href="index.html" class="w3-bar-item ms-logo">
+      <img src="images/logo.png"
+           alt="Magnolia Springs Logo"
+           class="logo-img">
+      Magnolia <span class="bloom">Springs</span>
+    </a>
+
+    <div class="ms-nav-links w3-hide-small">
+      <a href="vendors.html" class="w3-bar-item w3-button ms-nav-link">Vendors</a>
+      <a href="gallery.html" class="w3-bar-item w3-button ms-nav-link">Gallery</a>
+      <a href="artists.html" class="w3-bar-item w3-button ms-nav-link">Artists</a>
+      <a href="schedule.html" class="w3-bar-item w3-button ms-nav-link">Schedule</a>
+      <a href="register.html" class="w3-bar-item w3-button ms-btn">Register</a>
+    </div>
+
+    <a href="javascript:void(0)"
+       class="w3-bar-item w3-button w3-hide-large w3-hide-medium ms-toggle"
+       onclick="openSidebar()">
+      <i class="w3-xlarge">&#9776;</i>
+    </a>
+
+  </div>
+
+  <!-- Mobile Sidebar -->
+
+  <div id="mySidebar" class="ms-sidebar">
+
+    <a href="javascript:void(0)"
+       onclick="closeSidebar()"
+       class="ms-sidebar-close">
+       Close &times;
+    </a>
+
+    <a href="vendors.html" onclick="closeSidebar()" class="ms-nav-link">Vendors</a>
+    <a href="gallery.html" onclick="closeSidebar()" class="ms-nav-link">Gallery</a>
+    <a href="artists.html" onclick="closeSidebar()" class="ms-nav-link">Artists</a>
+    <a href="schedule.html" onclick="closeSidebar()" class="ms-nav-link">Schedule</a>
+    <a href="register.html" onclick="closeSidebar()" class="ms-nav-link">Register</a>
+
+  </div>
+
+  <div id="mySidebarOverlay"
+       class="ms-sidebar-overlay"
+       onclick="closeSidebar()">
+  </div>
+
+</div>
+
+<div class="ms-content-offset">
+
+<main class="ms-page-content">
+
+<!-- ================= HERO ================= -->
+
+<section class="ms-schedule-hero">
+
+    <div class="ms-schedule-text">
+
+        <h1>Festival Schedule</h1>
+
+        <p>
+            Plan your weekend at the Magnolia Springs Fall Festival.
+            Enjoy live music, local artists, family activities,
+            delicious food trucks, and community events throughout
+            the entire weekend.
+        </p>
+
+        <a href="register.html" class="ms-btn">
+            Register Now
+        </a>
+
+    </div>
+
+    <div class="ms-schedule-image">
+
+        <img src="images/f1.jpg"
+             alt="Festival crowd enjoying live music">
+
+    </div>
+
+</section>
+
+<!-- ================= QUICK INFO ================= -->
+
+<section class="ms-schedule-info">
+
+<div class="ms-info-card">
+
+<i class="fa-solid fa-calendar-day"></i>
+
+<h3>Friday</h3>
+
+<p>October 18</p>
+
+<span>4:00 PM – 10:00 PM</span>
+
+</div>
+
+<div class="ms-info-card">
+
+<i class="fa-solid fa-music"></i>
+
+<h3>Saturday</h3>
+
+<p>October 19</p>
+
+<span>10:00 AM – 10:00 PM</span>
+
+</div>
+
+<div class="ms-info-card">
+
+<i class="fa-solid fa-star"></i>
+
+<h3>Sunday</h3>
+
+<p>October 20</p>
+
+<span>10:00 AM – 5:00 PM</span>
+
+</div>
+
+</section>
+
+<!-- ================= DAILY SCHEDULE ================= -->
+
+<section class="ms-event-schedule">
+
+<h2>Weekend Events</h2>
+
+<div class="ms-day-grid">
+
+<!-- Friday -->
+
+<div class="ms-day-card">
+
+<h3>Friday</h3>
+
+<table class="ms-day-table">
+
+<tr>
+<th>Time</th>
+<th>Event</th>
+</tr>
+
+<tr>
+<td>4:00 PM</td>
+<td>Festival Gates Open</td>
+</tr>
+
+<tr>
+<td>5:00 PM</td>
+<td>Food Court Opens</td>
+</tr>
+
+<tr>
+<td>6:00 PM</td>
+<td>The Juniper Row</td>
+</tr>
+
+<tr>
+<td>7:00 PM</td>
+<td>Kids Activity Zone</td>
+</tr>
+
+<tr>
+<td>8:15 PM</td>
+<td>Marisol Vale</td>
+</tr>
+
+<tr>
+<td>9:45 PM</td>
+<td>Closing Announcement</td>
+</tr>
+
+</table>
+
+</div>
+<!-- ================= Saturday ================= -->
+
+<div class="ms-day-card">
+
+<h3>Saturday</h3>
+
+<table class="ms-day-table">
+
+<tr>
+<th>Time</th>
+<th>Event</th>
+</tr>
+
+<tr>
+<td>10:00 AM</td>
+<td>Vendor Market Opens</td>
+</tr>
+
+<tr>
+<td>11:00 AM</td>
+<td>Family Fun Activities</td>
+</tr>
+
+<tr>
+<td>12:30 PM</td>
+<td>Peachtree Brass Co.</td>
+</tr>
+
+<tr>
+<td>2:00 PM</td>
+<td>Pumpkin Decorating Contest</td>
+</tr>
+
+<tr>
+<td>3:30 PM</td>
+<td>River &amp; the Pines</td>
+</tr>
+
+<tr>
+<td>5:30 PM</td>
+<td>Food Truck Showcase</td>
+</tr>
+
+<tr>
+<td>6:45 PM</td>
+<td>DJ Sunny Side</td>
+</tr>
+
+<tr>
+<td>9:00 PM</td>
+<td>Festival Fireworks</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- ================= Sunday ================= -->
+
+<div class="ms-day-card">
+
+<h3>Sunday</h3>
+
+<table class="ms-day-table">
+
+<tr>
+<th>Time</th>
+<th>Event</th>
+</tr>
+
+<tr>
+<td>10:00 AM</td>
+<td>Festival Opens</td>
+</tr>
+
+<tr>
+<td>11:00 AM</td>
+<td>Local Artisan Market</td>
+</tr>
+
+<tr>
+<td>12:00 PM</td>
+<td>Songwriter Circle</td>
+</tr>
+
+<tr>
+<td>2:00 PM</td>
+<td>Community Awards</td>
+</tr>
+
+<tr>
+<td>3:30 PM</td>
+<td>Hollow Creek Revival</td>
+</tr>
+
+<tr>
+<td>5:00 PM</td>
+<td>Festival Closing Ceremony</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= Festival Information ================= -->
+
+<section class="ms-festival-info">
+
+<div class="ms-location-card">
+
+<h2>Festival Information</h2>
+
+<img src="images/f2.jpg"
+     alt="Magnolia Springs Festival">
+
+<ul>
+<li><strong>Location:</strong> Riverside Commons Park</li>
+<li><strong>Address:</strong> Magnolia Springs, Georgia</li>
+<li><strong>Free Parking</strong> available all weekend.</li>
+<li><strong>Admission:</strong> Free for all visitors.</li>
+<li>Accessible parking and restrooms available.</li>
+</ul>
+
+</div>
+
+<div class="ms-tips-card">
+
+<h2>Visitor Tips</h2>
+
+<ul>
+
+<li>✔ Arrive early for the best parking.</li>
+
+<li>✔ Bring comfortable walking shoes.</li>
+
+<li>✔ Support local vendors and artists.</li>
+
+<li>✔ Stay hydrated throughout the day.</li>
+
+<li>✔ Don't miss the live performances.</li>
+
+<li>✔ Family-friendly activities available all weekend.</li>
+
+<li>✔ Food trucks accept cash and most major credit cards.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= Register Banner ================= -->
+
+<section class="ms-register-banner">
+
+<h2>Ready to Join the Festival?</h2>
+
+<p>
+Register today as a vendor or artist and become part of
+Magnolia Springs Fall Festival 2024.
+</p>
+
+<a href="register.html" class="ms-btn">
+Register Now
+</a>
+
+</section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+
+<footer class="ms-footer">
+
+<div class="ms-footer-grid w3-content" style="max-width:1100px">
+
+<div class="ms-footer-brand">
+
+<img src="images/logo.png"
+     alt="Magnolia Springs Logo"
+     class="footer-logo">
+
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+
+</div>
+
+<div class="ms-footer-links">
+
+<div class="ms-footer-links-col"><a href="vendors.html">Vendors</a></div>
+<div class="ms-footer-links-col"><a href="gallery.html">Gallery</a></div>
+<div class="ms-footer-links-col"><a href="artists.html">Artists</a></div>
+<div class="ms-footer-links-col"><a href="schedule.html">Schedule</a></div>
+<div class="ms-footer-links-col"><a href="register.html">Register</a></div>
+
+</div>
+
+<div class="ms-footer-social">
+
+<h4>Follow Us</h4>
+
+<div class="ms-social-icons">
+
+<a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+
+<a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
+
+<a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+
+<a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+
+<a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="ms-footer-bottom">
+&copy; 2024 Magnolia Springs. All rights reserved.
+</div>
+
+</footer>
+
+</div>
+
+<script>
+
+function openSidebar(){
+
+document.getElementById("mySidebar").classList.add("ms-sidebar-open");
+
+document.getElementById("mySidebarOverlay").classList.add("ms-sidebar-open");
+
+document.body.style.overflow="hidden";
+
+}
+
+function closeSidebar(){
+
+document.getElementById("mySidebar").classList.remove("ms-sidebar-open");
+
+document.getElementById("mySidebarOverlay").classList.remove("ms-sidebar-open");
+
+document.body.style.overflow="";
+
+}
+
+</script>
+
+</body>
+</html>

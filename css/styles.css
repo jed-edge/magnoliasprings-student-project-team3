@@ -474,6 +474,12 @@ a:hover {
     box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
+.gallery-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
 .gallery-card img{
     width:100%;
     height:220px;
@@ -906,6 +912,245 @@ footer a:hover {
     }
 
 }
+#artists article{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
 
+#artists article img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+#artists article p:last-child{
+    margin-top:auto;
+    font-weight:bold;
+    color:var(--ms-green);
+}
+/* ======================================================
+   Schedule Page
+====================================================== */
+
+.ms-schedule-hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:70px;
+}
+
+.ms-schedule-text{
+    flex:1;
+}
+
+.ms-schedule-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.ms-schedule-text p{
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.ms-schedule-image{
+    flex:1;
+}
+
+.ms-schedule-image img{
+    width:100%;
+    max-width:520px;
+    border-radius:15px;
+    display:block;
+    margin:auto;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* ---------- Info Cards ---------- */
+
+.ms-schedule-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:70px;
+}
+
+.ms-info-card{
+    background:#fff;
+    border-radius:15px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.ms-info-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+.ms-info-card i{
+    font-size:42px;
+    color:var(--ms-orange);
+    margin-bottom:15px;
+}
+
+.ms-info-card h3{
+    margin-bottom:10px;
+}
+
+.ms-info-card p{
+    margin-bottom:8px;
+}
+
+.ms-info-card span{
+    color:var(--ms-green);
+    font-weight:bold;
+}
+
+/* ---------- Daily Schedule ---------- */
+
+.ms-event-schedule{
+    margin-bottom:70px;
+}
+
+.ms-event-schedule h2{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.ms-day-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.ms-day-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.ms-day-card h3{
+    background:var(--ms-green);
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin:0;
+}
+
+.ms-day-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.ms-day-table td,
+.ms-day-table th{
+    padding:14px 18px;
+    border-bottom:1px solid #eee;
+    text-align:left;
+}
+
+.ms-day-table th{
+    background:var(--ms-orange);
+    color:white;
+}
+
+.ms-day-table tr:last-child td{
+    border-bottom:none;
+}
+
+/* ---------- Festival Info ---------- */
+
+.ms-festival-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-bottom:70px;
+}
+
+.ms-location-card,
+.ms-tips-card{
+    background:#fff;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.ms-location-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.ms-location-card ul,
+.ms-tips-card ul{
+    padding-left:20px;
+}
+
+.ms-location-card li,
+.ms-tips-card li{
+    margin-bottom:12px;
+    line-height:1.6;
+}
+
+/* ---------- Bottom CTA ---------- */
+
+.ms-register-banner{
+    background:linear-gradient(135deg,var(--ms-green),var(--ms-orange));
+    color:white;
+    border-radius:15px;
+    padding:60px 30px;
+    text-align:center;
+    margin-top:50px;
+}
+
+.ms-register-banner h2{
+    color:white;
+    margin-bottom:15px;
+}
+
+.ms-register-banner p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.ms-register-banner .ms-btn{
+    font-size:17px;
+    padding:14px 30px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+.ms-schedule-hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.ms-schedule-text h1{
+    font-size:36px;
+}
+
+.ms-day-grid{
+    grid-template-columns:1fr;
+}
+
+.ms-festival-info{
+    grid-template-columns:1fr;
+}
+
+.ms-register-banner{
+    padding:40px 20px;
+}
+
+}
 
 
